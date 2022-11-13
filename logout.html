@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <style>
+    #signup{ 
+      text-align: center;
+      color: blueviolet;
+      width: 30%;
+      height: 500px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin: auto;
+      border-radius: 10px;
+    }
+    input{
+      padding: 10px;
+       margin: 20px;
+       border-radius: 6px;
+      display: block;
+    }
+    form{
+      display: grid;
+      
+    }
+      /* Write all necessery css here  */
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+  </div>
+  <div id="signup">
+    <h1>Sign Up</h1>
+    <form>
+      <input placeholder="Enter Name" type="text" id="name">
+      <input placeholder="Enter Email" type="email" id="email">
+      <input placeholder="Enter Password" type="password"  id="password">
+      <input  type="submit" value="Submit" />
+    </form>
+    <h4>Already have an account/
+    <a href="login.html">Sign In</a></h4>
+  </div>
+</body>
+<script>
+ let form = document.querySelector("form")
+form.addEventListener("submit", function(e){
+       e.preventDefault()
+       let name = document.querySelector("#name").value
+       let email = document.querySelector("#email").value
+       let password = document.querySelector("#password").value
+       let obj = {name,email,password}
+       console.log(obj)
+       if(name==""){
+        alert("Please all the boxes")
+       }
+       if(email==""){
+        alert("Please all the boxes")
+       }
+       if(password==""){
+        alert("Please all the boxes")
+       }
+      localStorage.setItem("account-data",JSON.stringify(obj))
+      window.location.href = "login.html"
+})
+
+
+
+</script>
+
+</html>

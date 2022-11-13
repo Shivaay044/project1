@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        /* NavBar */
+        #top-Nav {
+            /* border: 1px solid rgb(212, 9, 9); */
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+
+
+
+        .sign {
+            margin: 10px;
+            padding: 10px;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .sign>input,
+        a {
+            margin: 8px;
+        }
+
+        /* btm-Nav */
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        nav {
+            height: 70px;
+            opacity: 1;
+        }
+
+        nav ul {
+            margin-right: 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+
+            color: rgba(0, 0, 0, 0.986);
+            display: block;
+            padding: 0 20px;
+            line-height: 70px;
+            font-size: small;
+            font-weight: bold;
+            transition: .7s;
+        }
+
+        nav ul ul {
+            position: absolute;
+            top: 85px;
+            opacity: 0;
+            visibility: visible;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+            top: 170px;
+            opacity: 2;
+            visibility: visible;
+            transition: .6s linear;
+        }
+
+        nav ul ul li {
+            width: 200px;
+            ;
+            display: list-item;
+            position: relative;
+            background-color: rgb(191, 199, 206);
+        }
+
+        .hover-line:hover {
+            color: rgb(11, 128, 42);
+
+        }
+
+        /* descript */
+        #descript{
+            width: 90%;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            background-color:#faf6f5;
+        }
+        #descript>div:nth-child(1){
+            width: 40%;
+            height: 100%;
+           
+        }
+        #descript>div:nth-child(2){
+            width: 40%;
+            margin-left: 30px;
+           
+        }
+
+        /* products */
+        #product{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            padding: 10px;
+            align-items: center;
+            background-color: rgb(228, 212, 244);
+        }
+        #product>div>img{
+            width: 60%;
+            height: 50%;
+        }
+        #product>div{
+            height: 300px;
+            width: 50%;
+           text-align: center;
+           margin-left: 60px;
+           padding: 10px;
+           background-color: rgb(254, 255, 241);
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        /* end */
+        #end {
+            margin-top: 60px;
+        }
+
+        #end>div {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            justify-content: space-evenly;
+            padding-left: 20px;
+        }
+
+        #end>div>div {
+            padding: 23px;
+        }
+
+        #end>div>div>p {
+            padding: 10px;
+        }
+
+        /* over */
+        #over{
+            height: 40px;
+            padding: 6px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+        #over>a{
+            padding: 4px;
+        }
+
+        /* filter */
+        #filter{
+            display: flex;
+           align-content: center;
+           justify-content: center;
+            margin: 10px;
+            background-color: azure;
+            padding: 10px;
+        }
+        #filter>select{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+      <!-- NavBar -->
+    <!-- top-Nav -->
+    <div id="top-Nav">
+        <div class="consult">
+            <a href="">FIND A CONSULTANT </a>
+        </div>
+        <div class="logo">
+            <img height="100px" width="250px" src="http://127.0.0.1:5500/img/logo.png" alt="logo">
+        </div>
+        <div class="sign">
+            <input placeholder="Search" type="text">
+            <a href="login.html">Sign in</a>
+            <a href="cart.html"> <img height="20px" width="100%" src="https://img.icons8.com/office/512/shopping-cart.png"
+                    alt="">
+            </a>
+        </div>
+    </div>
+    <hr>
+    <!-- btm-Nav -->
+    <div class="container">
+        <nav class="flex">
+            <ul>
+                <li>
+                    <a href="#">SKINCARE
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul>
+                        <li><a class="hover-line" href="Landing-Pg.html"> Regimens</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Lash & Brow</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Eye Creams</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Face Mask</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Mostorisers</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">HAIRCARE
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul>
+                        <li><a class="hover-line" href="Landing-Pg.html"> Regimens</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Shampoo</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Conditioner</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Styleling </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">BEST SELLERS</a>
+                </li>
+                <li>
+                    <a href="#">SPECIALS OFFERS</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul>
+                        <li><a class="hover-line" href="Landing-Pg.html">Our Story</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Before + After</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Explore</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Our Impact</a></li>
+                        <li><a class="hover-line" href="Landing-Pg.html">Blogs</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">PERKS PROGRAM</a>
+                </li>
+                <li>
+                    <a href="">BECOME A CONSULTANT</a>
+                </li>
+                <li>
+                    <a href="">FIND A CONSULTANT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- descript -->
+    <div id="descript">
+      <div>
+        <img height="100%" width="100%" src="https://www.rodanandfields.com/en-us/medias/category-skincare-regimens-category-page-global.jpg?context=bWFzdGVyfHJvb3R8OTIzNjB8aW1hZ2UvanBlZ3xoMjUvaGVkLzE0OTMwMzcwODg3NzEwLmpwZ3xhNWVlNThiMTBiY2MxZTk2ODYxZWJjN2Q5ZTU2OWZhYjNmMDJiZDVmYjU0MjIwNGM0ZDcxNDdkZDFiOTNkZGIw" alt="">
+      </div>
+      <div>
+        <h1>Skincare Regimens</h1>
+        <p>
+            Finding a good skincare routine is easier than you may think. Our multi-step Regimens take the guesswork out of building a routine that works.
+        </p>
+      </div>
+    </div>
+
+    <!-- filter -->
+    <div id="filter">
+        <select onchange="filterData()" id="this">
+            <option value="">Select Products</option>
+            <option value="Cream">Cream</option>
+            <option value="Shampoo">Shampoo</option>
+            <option value="Lotion">Lotion</option>
+        </select>
+    </div>
+
+    <!-- product -->
+    <div id="product"></div>
+
+    <!-- end -->
+      <div id="end">
+        <div>
+            <div>
+                <h3>ABOUT R+F</h3>
+                <p><a href="#">PRESS ROOM</a></p>
+                <p><a href="#">COMPANY INFO</a></p>
+                <p><a href="#">EXECUTIVE TEAM</a></p>
+                <p><a href="#">CAREERS</a></p>
+                <p><a href="#">R+F RECYCLING PROGRAM</a></p>
+                <p><a href="#">BLOG</a></p>
+            </div>
+            <div>
+                <h3>HELP</h3>
+                <p><a href="#">PRODUCT & HELP CENTER</a></p>
+                <p><a href="#">SHIPPING</a></p>
+                <p><a href="#">PROMOTIONAL TERMS & CONDITIONS</a></p>
+                <p><a href="#">R+F FAQS</a></p>
+                <p><a href="#">KLARNA</a></p>
+                <p><a href="#">SITE MAP</a></p>
+            </div>
+            <div>
+                <h2>Let’s Get Social</h2>
+                <a href="https://www.facebook.com/">
+                <img width="40px" height="40px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0HuoEkwTs34EVQwiAe_6F95bRMegB3zD-RJRkEuiJpDr4HTg-npz4tsfIrhXzvUzOeX4&usqp=CAU"
+                    alt="">
+                </a>
+                <a href="https://twitter.com/i/flow/login">
+                <img width="40px" height="40px"
+                    src="data:image/png;base64,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"
+                    alt="">
+                </a>
+                <a href="https://www.instagram.com/accounts/login/">
+                <img width="40px" height="40px"
+                    src="data:image/png;base64,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"
+                    alt="">
+                </a>
+                 <a href="https://www.youtube.com/">
+                <img width="40px" height="40px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO_MqxLF5lUMGRG3j6PA80V1USLdNEuN--HA&usqp=CAU"
+                    alt="">
+                </a>
+                <a href="https://in.pinterest.com/">
+                <img width="40px" height="40px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt1jrEMQsNgY3f4YrcPy5qvlAarRRh74TogQ&usqp=CAU"
+                    alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- over -->
+    <div id="over">
+        <p>&#169 2022 Rodan & Fields</p> 
+        <a href="#">Privacy Policy</a>|
+        <a href="#">Terms & Conditions</a>|
+        <a href="#">Accessibility</a>|
+        <a href="#">California Supply Chains Act</a>|
+        <a href="#">DSA Code Of Ethics</a>|
+        <a href="#">Disclaimer</a>|
+        <a href="#">Preference Center</a>
+    </div>
+</body>
+</html>
+
+
+<script src="products.js"></script>

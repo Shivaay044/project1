@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Page</title>
+    <style>
+      #signin{ 
+      color: blueviolet;
+      width: 30%;
+      height: 400px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 10px;
+      margin: auto;
+    }
+    #signin>h1,h4,p{
+        text-align: center;
+    }
+    input{
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px;
+      
+    }
+    form{
+      display: grid;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+
+      </div>
+      <div id="signin">
+        <h1>Sign In</h1>
+        <form>
+          <input placeholder="Enter E-mail" type="email" id="email">
+          <input placeholder="Enter Password" type="password"  id="password">
+          <input type="submit" value="Submit" />
+        </form>
+        <p>Click Here After SignIn <a href="Landing-Pg.html">Home</a></p>
+        <h4>Don't have an account ? <a href="logout.html">Sign Up</a></h4>
+      </div>
+</body>
+<script>
+ let form = document.querySelector("form")
+form.addEventListener("submit", function(e){
+       e.preventDefault()
+       let mail = document.querySelector("#email").value
+       let pass = document.querySelector("#password").value
+       let obj1 = {mail,pass}
+       console.log(obj1)
+       let obj = JSON.parse(localStorage.getItem("account-data"))
+  if(obj.email==obj1.mail&& obj.password==obj1.pass ){
+    return window.location.href="Landing-Pg.html"
+  }
+  else{
+  return alert("Wrong Credentials")
+  }
+ 
+})
+
+ 
+</script>
+</html>
